@@ -1,4 +1,18 @@
 $light-text: #FFFFFF;
 $dark-text: #000000;
+$dark-text-59: rgba(0, 0, 0, 0.59);
+$dark-text-70: rgba(0, 0, 0, 0.7);
+$gray-text: #727272;
 $beige: #AFA17E;
 $bg-color: #4b4b4b;
+
+// Blur and brightness filters
+$backdrop-blur: blur(5px);
+$backdrop-brightness: brightness(77%);
+$backdrop-bg-opacity: 0;
+
+$popup-blur: blur(32px);
+$popup-brightness: brightness(47%);
+$popup-bg-opacity: 0.9;
+
+$color-white: #ffffff;

@@ -28,7 +28,10 @@
           <li><a href="#">Beställning</a></li>
         </ul>
       </div>
-      <button class="login-btn">Logga in</button>
+      <div class="nav-right">
+        <p id="welcomeMsg" class="welcome"></p>
+        <button class="login-btn" id="loginBtn">Logga in</button>
+      </div>
     </nav>
 
     <!-- Hero -->
@@ -38,6 +41,26 @@
         <h1>Silkeslena produkter med glansiga detaljer</h1>
       </div>
     </section>
+
+      <!-- Log in popup -->
+      <div class="popup-backdrop hidden" id="popupBackdrop"></div>
+    <div class="login-popup hidden" id="popup">
+      <button class="close-btn" aria-label="Stäng" id="close">
+        <img src="/close-symbol.svg" alt="Stäng popup" />
+      </button>
+      <div class="login-content">
+
+        <h2>Logga in</h2>
+        <p class="login-description">Andvänd ditt namn för att logga in</p>
+        <input type="text" placeholder="Namn" class="name-input" id="username"/>
+        <button class="confirm-login" id="confirmLogin">Logga in</button>
+        <p class="terms">
+          Genom att logga in godkänner du <a href="#">våra villkor</a>
+        </p>
+      </div>
+    </div>
+
+
 
     <script type="module" src="/src/main.js"></script>
   </body>
