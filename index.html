@@ -1,13 +1,44 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="sv">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/test-logga.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google fonts. Bennet banner not available, replaced with Playfair Display-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
     <title>A - Inloggning</title>
   </head>
   <body>
-    <div id="app"></div>
+    <!-- Navigation -->
+    <nav>
+      <div class="nav-left">
+        <a href="/">
+          <img src="/test-logga.svg" alt="Företagslogga" class="logo" />
+        </a>
+        <ul>
+          <li><a href="#">Produkter</a></li>
+          <li><a href="#">Om oss</a></li>
+          <li><a href="#">Beställning</a></li>
+        </ul>
+      </div>
+      <button class="login-btn">Logga in</button>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="content">
+        <p>Ett nytt sätt att upptäcka</p>
+        <h1>Silkeslena produkter med glansiga detaljer</h1>
+      </div>
+    </section>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
