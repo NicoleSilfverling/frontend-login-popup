@@ -1,12 +1,12 @@
-import './style.scss'
+import './style.scss';
 
-const loginBtn = document.getElementById("loginBtn");
-const confirmLogin = document.getElementById("confirmLogin");
-const popupBackdrop = document.getElementById("popupBackdrop");
-const popup = document.getElementById("popup");
-const closeBtn = document.getElementById("close");
-const usernameInput = document.getElementById("username");
-const welcomeMsg = document.getElementById("welcomeMsg");
+const loginBtn = document.getElementById('loginBtn');
+const confirmLogin = document.getElementById('confirmLogin');
+const popupBackdrop = document.getElementById('popupBackdrop');
+const popup = document.getElementById('popup');
+const closeBtn = document.getElementById('close');
+const usernameInput = document.getElementById('username');
+const welcomeMsg = document.getElementById('welcomeMsg');
 
 // Show popup on nav login button
 loginBtn.addEventListener('click', () => {
@@ -27,6 +27,7 @@ function togglePopup() {
   popupBackdrop.classList.toggle('hidden');
 }
 
+// Log in
 confirmLogin.addEventListener('click', () => {
   const name = usernameInput.value.trim();
   if (name) {
@@ -46,4 +47,22 @@ confirmLogin.addEventListener('click', () => {
   }
 });
 
+// Open / close hamburger menu
+const hamburger = document.querySelector('.hamburger');
+const nav = document.querySelector('nav');
+const closeTargets = document.querySelectorAll('[data-close]');
 
+function toggleMenu(open) {
+  nav.classList.toggle('mobile-open', open);
+  hamburger.classList.toggle('open', open);
+  hamburger.setAttribute('aria-expanded', open);
+}
+
+hamburger.addEventListener('click', () => {
+  const isOpen = nav.classList.contains('mobile-open');
+  toggleMenu(!isOpen);
+});
+
+closeTargets.forEach((el) => {
+  el.addEventListener('click', () => toggleMenu(false));
+});

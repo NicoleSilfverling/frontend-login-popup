@@ -23,14 +23,24 @@
           <img src="/test-logga.svg" alt="Företagslogga" class="logo" />
         </a>
         <ul>
-          <li><a href="#">Produkter</a></li>
-          <li><a href="#">Om oss</a></li>
-          <li><a href="#">Beställning</a></li>
+          <li><a href="#" data-close>Produkter</a></li>
+          <li><a href="#" data-close>Om oss</a></li>
+          <li><a href="#" data-close>Beställning</a></li>
         </ul>
       </div>
       <div class="nav-right">
+        <button
+          class="hamburger"
+          aria-label="Meny"
+          aria-expanded="false"
+          aria-controls="navMenu"
+        >
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
         <p id="welcomeMsg" class="welcome"></p>
-        <button class="login-btn" id="loginBtn">Logga in</button>
+        <button class="login-btn" id="loginBtn" data-close>Logga in</button>
       </div>
     </nav>
 
@@ -42,25 +52,27 @@
       </div>
     </section>
 
-      <!-- Log in popup -->
-      <div class="popup-backdrop hidden" id="popupBackdrop"></div>
+    <!-- Log in popup -->
+    <div class="popup-backdrop hidden" id="popupBackdrop"></div>
     <div class="login-popup hidden" id="popup">
       <button class="close-btn" aria-label="Stäng" id="close">
         <img src="/close-symbol.svg" alt="Stäng popup" />
       </button>
       <div class="login-content">
-
         <h2>Logga in</h2>
         <p class="login-description">Andvänd ditt namn för att logga in</p>
-        <input type="text" placeholder="Namn" class="name-input" id="username"/>
+        <input
+          type="text"
+          placeholder="Namn"
+          class="name-input"
+          id="username"
+        />
         <button class="confirm-login" id="confirmLogin">Logga in</button>
         <p class="terms">
           Genom att logga in godkänner du <a href="#">våra villkor</a>
         </p>
       </div>
     </div>
-
-
 
     <script type="module" src="/src/main.js"></script>
   </body>
